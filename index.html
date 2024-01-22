@@ -5,18 +5,472 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockeys</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/c93a681fb9.js" crossorigin="anonymous"></script>
+
     <!-- tailwind and daisyUI styles -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- tailwind custom classes -->
 
+
+    <!-- tailwind custom classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        "hockeys-primary": '#FF4240',
+                    }
+                }
+            }
+        }
+    </script>
 
 
     <!-- custom styles -->
+    <style>
+        * {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
 
+
+    <!-- header starts -->
+    <header class="container mx-auto">
+        <!-- navbar starts -->
+        <div class="navbar bg-base-100 flex items-center mb-12">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base font-normal">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost lg:text-4xl  text-2xl font-extrabold">Hockey<span
+                        class="text-hockeys-primary">'</span>s
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-base font-normal">
+                    <li><a class="text-hockeys-primary">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <i class="fa-solid fa-magnifying-glass me-6 lg:visible invisible"></i>
+                <a class="btn bg-hockeys-primary text-white text-xl font-bold">get ticket</a>
+            </div>
+        </div>
+        </nav>
+        <!-- carousel starts -->
+        <section class="carousel-section">
+            <div class="carousel w-full">
+                <!-- slide 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="Images/1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                    <!-- carousel badge -->
+                    <div
+                        class="carousel-badge lg:visible invisible absolute lg:bottom-8 lg:right-8 rounded-lg bg-slate-950 p-8">
+                        <h3 class="text-white text-2xl font-extrabold">Meet all the heroes from the field</h3>
+                        <br>
+                        <p class="text-gray-400	 text-sm font-medium">
+                            Discover and connect with a diverse array of heroes in the field,
+                            <br>
+                            each contributing their unique skills and expertise to make a meaningful impact.
+                        </p>
+                    </div>
+                </div>
+                <!-- slide2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="Images/2.png" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- carousel badge in mobile view -->
+        <section>
+            <div class="carousel-badge lg:hidden m-3 visible rounded-lg bg-slate-950 p-8">
+                <h3 class="text-white text-lg font-extrabold">Meet all the heroes from the field</h3>
+                <br>
+                <p class="text-gray-400	 text-sm font-medium">
+                    Discover and connect with a diverse array of heroes in the field,
+                    <br>
+                    each contributing their unique skills and expertise to make a meaningful impact.
+                </p>
+            </div>
+        </section>
+    </header>
+
+
+    <!-- main starts -->
+    <main class="container mx-auto">
+        <section class="hockeys-club my-24">
+            <hr class="border-t-2 border-dashed">
+            <!-- hockeys club header -->
+            <div class="hockeys-club-heading">
+                <h1 class="text-4xl font-extrabold text-center my-6">Professional Hockeys Club</h1>
+                <p class="text-center text-base font-medium text-gray-400 mb-8">
+                    Experience the epitome of excellence with our Professional Hockey Club,
+                    <br>
+                    where passion meets precision on the ice.
+                </p>
+            </div>
+            <hr class="border-t-2 border-dashed">
+            <!-- progress cards -->
+            <div class="progress-cards-container flex lg:flex-row flex-col items-center">
+                <!-- card1 -->
+                <div class="card w-96">
+                    <figure class="px-10 pt-10">
+                        <div class="radial-progress text-hockeys-primary" style="--value:87;" role="progressbar">87%
+                        </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Prayer Facility</h2>
+                        <p>Find solace in our state-of-the-art Prayer Facility, a tranquil space designed for spiritual
+                            reflection and rejuvenation.</p>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card w-96">
+                    <figure class="px-10 pt-10">
+                        <div class="radial-progress text-green-400" style="--value:95;" role="progressbar">95%</div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Experienced Coach</h2>
+                        <p>Guided by an Experienced Coach, our team thrives on expertise, fostering skill development
+                            and strategic prowess.</p>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card w-96">
+                    <figure class="px-10 pt-10">
+                        <div class="radial-progress text-amber-500" style="--value:90;" role="progressbar">90%</div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Senior Player</h2>
+                        <p>Elevate your game alongside seasoned talent as a Senior Player, contributing leadership and
+                            experience to our dynamic team.</p>
+                    </div>
+                </div>
+                <!-- card4 -->
+                <div class="card w-96">
+                    <figure class="px-10 pt-10">
+                        <div class="radial-progress text-sky-500" style="--value:80;" role="progressbar">80%</div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Training Ground</h2>
+                        <p>Unleash your potential on our cutting-edge Training Ground, where innovation meets dedication
+                            for peak athletic performance.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-t-2 border-dashed">
+        </section>
+        <!-- Program section -->
+        <section class="program-section">
+            <h1 class="font-extrabold text-4xl text-center">Program Section</h1>
+            <p class="text-center mt-6 mb-8">
+                Dive into our Program Section, where a curated array of transformable initiatives awaits,
+                <br>
+                designed to empower and inspire personal and collective growth.
+            </p>
+            <hr class="border-t-2 border-dashed mb-12">
+            <!-- program section cards -->
+            <div class="program-cards-container flex lg:flex-row  flex-col gap-6 items-center mb-6">
+                <div class="card w-96 image-full flex-1">
+                    <figure><img src="Images/2.png" class="w-full" alt="" /></figure>
+                    <div class="card-body w-3/4 lg:h-0 lg:mt-48 justify-start">
+                        <div class="card-actions justify-start">
+                            <h2 class="card-title text-2xl text-white font-extrabold">Junior Program</h2>
+                            <p class="text-base font-medium mt-4 mb-4">Embark on a journey of skill development and
+                                camaraderie with our Junior Program, fostering a passion for excellence in young
+                                talents.</p>
+                            <button
+                                class="btn border-none text-white text-xl font-bold bg-hockeys-primary w-44">Register
+                                Now!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 image-full flex-1">
+                    <figure><img src="Images/2.png" class="w-full" alt="" /></figure>
+                    <div class="card-body w-3/4 lg:h-0 lg:mt-48 justify-start">
+                        <div class="card-actions justify-start">
+                            <h2 class="card-title text-2xl text-white font-extrabold">Junior Program</h2>
+                            <p class="text-base font-medium mt-4 mb-4">Embark on a journey of skill development and
+                                camaraderie with our Junior Program, fostering a passion for excellence in young
+                                talents.</p>
+                            <button
+                                class="btn border-none text-white text-xl font-bold bg-hockeys-primary w-44">Register
+                                Now!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex lg:m-0 m-5">
+                <div class="card lg:w-full image-full flex-1">
+                    <figure><img src="Images/4.png" class="w-full" alt="" /></figure>
+                    <div class="card-body lg:w-3/4 lg:h-0 lg:mt-80 justify-start">
+                        <div class="card-actions justify-start w-1/2">
+                            <h2 class="card-title text-2xl text-white font-extrabold">Junior Program</h2>
+                            <p class="text-base font-medium mt-4 mb-4">Embark on a journey of skill development and
+                                camaraderie with our Junior Program, fostering a passion for excellence in young
+                                talents.</p>
+                            <button
+                                class="btn border-none text-white text-xl font-bold bg-hockeys-primary w-44">Register
+                                Now!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="border-t-2 border-dashed mt-24 mb-8">
+
+        <!-- New Products Section -->
+        <section class="new-products-section">
+            <div class="new-products-header text-center">
+                <h2 class="mb-6 text-4xl font-extrabold">Our New Products</h2>
+                <p class="text-gray-400 font-medium text-base">Explore innovation with Our New Products, where
+                    cutting-edge designs and advanced features redefine
+                    functionality,
+                    <br> ensuring you stay ahead in style and performance.
+                </p>
+                <hr class="border-t-2 border-dashed mt-8 mb-12">
+            </div>
+
+            <!-- new product cards -->
+            <div class="new-products-cards-container grid lg:grid-cols-2 gap-6">
+                <div class="card lg:card-side border rounded p-4 lg:m-0 m-4 ">
+                    <figure><img src="Images/5.png" alt="Album" /></figure>
+                    <div class="card-body">
+                        <div class="flex justify-evenly items-center">
+                            <p><i class="fa-solid fa-star pr-2"></i>5.0</p>
+                            <p><i class="fa-solid fa-eye pr-2"></i>20</p>
+                            <p><i class="fa-solid fa-heart pr-2"></i>200</p>
+                        </div>
+                        <h2 class="card-title font-extrabold tex-xl my-3">World Cup Flags Football</h2>
+                        <p class="mb-3">You can purchase this product for $22.00 only and get a free delivery</p>
+                        <div class="card-actions justify-end items-center">
+                            <p class="text-hockeys-primary text-lg font-extrabold">Price - $22.00</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Delivery Fee : Free</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card lg:card-side border rounded p-4 lg:m-0 m-4 ">
+                    <figure><img src="Images/6.png" alt="Album" /></figure>
+                    <div class="card-body">
+                        <div class="flex justify-evenly items-center">
+                            <p><i class="fa-solid fa-star pr-2"></i>5.0</p>
+                            <p><i class="fa-solid fa-eye pr-2"></i>20</p>
+                            <p><i class="fa-solid fa-heart pr-2"></i>200</p>
+                        </div>
+                        <h2 class="card-title font-extrabold tex-xl my-3">World Cup Flags Football</h2>
+                        <p class="mb-3">You can purchase this product for $22.00 only and get a free delivery</p>
+                        <div class="card-actions justify-end items-center">
+                            <p class="text-hockeys-primary text-lg font-extrabold">Price - $22.00</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Delivery Fee : Free</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card lg:card-side border rounded p-4 lg:m-0 m-4 ">
+                    <figure><img src="Images/7.png" alt="Album" /></figure>
+                    <div class="card-body">
+                        <div class="flex justify-evenly items-center">
+                            <p><i class="fa-solid fa-star pr-2"></i>5.0</p>
+                            <p><i class="fa-solid fa-eye pr-2"></i>20</p>
+                            <p><i class="fa-solid fa-heart pr-2"></i>200</p>
+                        </div>
+                        <h2 class="card-title font-extrabold tex-xl my-3">World Cup Flags Football</h2>
+                        <p class="mb-3">You can purchase this product for $22.00 only and get a free delivery</p>
+                        <div class="card-actions justify-end items-center">
+                            <p class="text-hockeys-primary text-lg font-extrabold">Price - $22.00</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Delivery Fee : Free</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card lg:card-side border rounded p-4 lg:m-0 m-4 ">
+                    <figure><img src="Images/8.png" alt="Album" /></figure>
+                    <div class="card-body">
+                        <div class="flex justify-evenly items-center">
+                            <p><i class="fa-solid fa-star pr-2"></i>5.0</p>
+                            <p><i class="fa-solid fa-eye pr-2"></i>20</p>
+                            <p><i class="fa-solid fa-heart pr-2"></i>200</p>
+                        </div>
+                        <h2 class="card-title font-extrabold tex-xl my-3">World Cup Flags Football</h2>
+                        <p class="mb-3">You can purchase this product for $22.00 only and get a free delivery</p>
+                        <div class="card-actions justify-end items-center">
+                            <p class="text-hockeys-primary text-lg font-extrabold">Price - $22.00</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Delivery Fee : Free</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card lg:card-side border rounded p-4 lg:m-0 m-4 ">
+                    <figure><img src="Images/9.png" alt="Album" /></figure>
+                    <div class="card-body">
+                        <div class="flex justify-evenly items-center">
+                            <p><i class="fa-solid fa-star pr-2"></i>5.0</p>
+                            <p><i class="fa-solid fa-eye pr-2"></i>20</p>
+                            <p><i class="fa-solid fa-heart pr-2"></i>200</p>
+                        </div>
+                        <h2 class="card-title font-extrabold tex-xl my-3">World Cup Flags Football</h2>
+                        <p class="mb-3">You can purchase this product for $22.00 only and get a free delivery</p>
+                        <div class="card-actions justify-end items-center">
+                            <p class="text-hockeys-primary text-lg font-extrabold">Price - $22.00</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Delivery Fee : Free</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card lg:card-side border rounded lg:m-0 m-4 p-4">
+                    <figure><img src="Images/10.png" alt="Album" /></figure>
+                    <div class="card-body lg:text-start text-center">
+                        <div class="flex justify-evenly items-center">
+                            <p><i class="fa-solid fa-star pr-2"></i>5.0</p>
+                            <p><i class="fa-solid fa-eye pr-2"></i>20</p>
+                            <p><i class="fa-solid fa-heart pr-2"></i>200</p>
+                        </div>
+                        <h2 class="card-title font-extrabold tex-xl my-3">World Cup Flags Football</h2>
+                        <p class="mb-3">You can purchase this product for $22.00 only and get a free delivery</p>
+                        <div class="card-actions justify-end items-center">
+                            <p class="text-hockeys-primary text-lg font-extrabold">Price - $22.00</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Delivery Fee : Free</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="border-t-2 border-dashed mt-24 mb-8">
+
+        <!-- Clients Question section -->
+        <section class="clients-section">
+            <div class="clients-section-header">
+                <h1 class="text-4xl font-extrabold text-center">Clients Questions</h1>
+                <p class="text-center font-medium text-gray-400 mt-6 mb-8">Explore insightful answers to Clients'
+                    Questions, providing clarity and transparency
+                    <br> as we address your inquiries with expertise and dedication.
+                </p>
+                <hr class="border-t-2 border-dashed mb-8">
+            </div>
+            <div class="border rounded p-8 flex lg:flex-row flex-col items-center">
+                <div class="lg:w-2/5">
+                    <img src="Images/11.png" alt="">
+                </div>
+                <div class="lg:w-3/5">
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" checked="checked" /> 
+                        <div class="collapse-title text-xl font-medium">
+                            Our Equipment
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Discover top-tier quality in Our Equipment, ensuring peak performance for every pursuit on and off the field.</p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" /> 
+                        <div class="collapse-title text-xl font-medium">
+                            Hockey Training
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Elevate your game with comprehensive Hockey Training, where skill refinement meets strategic excellence.</p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" /> 
+                        <div class="collapse-title text-xl font-medium">
+                            Private Lessons
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Unlock your full potential through personalized guidance with Private Lessons, tailored to refine your unique strengths.</p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" /> 
+                        <div class="collapse-title text-xl font-medium">
+                            Ski Touring
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Embark on thrilling adventures with Ski Touring, exploring scenic landscapes and conquering snowy terrains.</p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" /> 
+                        <div class="collapse-title text-xl font-medium">
+                            Booking
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Simplify your experience with easy Booking, offering seamless access to our facilities, services, and events.</p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" /> 
+                        <div class="collapse-title text-xl font-medium">
+                            Pricings
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Explore flexible and competitive Pricings, ensuring accessibility to premium experiences tailored to your preferences.</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <hr class="border-t-2 border-dashed mt-24 mb-8">
+        
+        <!-- Get in Touch section -->
+        <h1 class="text-4xl font-extrabold text-center">Get In Touch</h1>
+        <p class="text-center py-6 text-gray-400 font-medium">
+            Connect seamlessly with us through 'Get in Touch,' your gateway to open communication,
+            <br> inquiries, and personalized assistance.
+        </p>
+        <hr class="border-t-2 border-dashed mt-6 mb-12">
+    </main>
+
+
+    <!-- footer starts -->
+    <footer>
+
+    </footer>
 </body>
 
 </html>
