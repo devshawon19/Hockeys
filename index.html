@@ -31,6 +31,7 @@
                         "phone-card": 'rgba(188, 237, 109, 0.1)',
                         "email-card": 'rgba(253, 221, 95, 0.1)',
                         "location-card": 'rgba(98, 156, 243, 0.1)',
+                        "footer-bg": 'rgba(19, 19, 24, 1)',
                     }
                 }
             }
@@ -538,17 +539,58 @@
                         <h3 class="text-xl font-bold mb-4">Message</h3>
                         <textarea placeholder="Write your message" rows="12"
                             class="w-full flex-1 p-4 bg-gray-200 rounded-lg"></textarea>
-                            <button class="btn btn-error w-full rounded-lg text-white text-xl font-bold mt-10">Send Message</button>
+                        <button class="btn btn-error w-full rounded-lg text-white text-xl font-bold mt-10">Send
+                            Message</button>
                     </label>
                 </fieldset>
             </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-media-section my-12 lg:w-full w-80 mx-auto">
+            <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+                <nav>
+                    <h3 class="font-extrabold text-xl">Social Media</h3>
+                    <div class="grid grid-flow-col gap-4">
+                        <a><i class="fa-brands fa-twitter"></i></a>
+                        <a><i class="fa-brands fa-facebook"></i></a>
+                        <a><i class="fa-brands fa-instagram"></i></a>
+                        <a><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </nav>
+            </footer>
         </section>
     </main>
 
 
     <!-- footer starts -->
-    <footer>
-
+    <footer class="footer p-10 bg-footer-bg text-base-content">
+        <div class="container mx-auto flex justify-around">
+            <aside class="text-white flex flex-col">
+                <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+            </aside>
+            <nav class="text-white flex flex-col">
+                <h6>Company</h6>
+                <a class="link link-hover footer-title">About us</a>
+                <a class="link link-hover footer-title">Leadership</a>
+                <a class="link link-hover footer-title">Careers</a>
+                <a class="link link-hover footer-title">News & Article</a>
+                <a class="link link-hover footer-title">Advertisement</a>
+            </nav>
+            <nav class="text-white flex flex-col">
+                <h6>Support</h6>
+                <a class="link link-hover footer-title">About us</a>
+                <a class="link link-hover footer-title">Contact</a>
+                <a class="link link-hover footer-title">Jobs</a>
+                <a class="link link-hover footer-title">Press kit</a>
+            </nav>
+            <nav class="text-white flex flex-col">
+                <h6>Service</h6>
+                <a class="link link-hover footer-title">Terms of use</a>
+                <a class="link link-hover footer-title">Privacy policy</a>
+                <a class="link link-hover footer-title">Cookie policy</a>
+            </nav>
+        </div>
     </footer>
 </body>
 
